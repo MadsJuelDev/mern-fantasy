@@ -6,8 +6,8 @@ const CharacterMain = () => {
 
   return (
     <div className="content-section">
-      <div className="content-section-title">Apps in your plan</div>
-      <div className="apps-card">
+      <div className="content-section-title"></div>
+      <div className="apps-card testimonial-grid">
         <Hair />
       </div>
     </div>

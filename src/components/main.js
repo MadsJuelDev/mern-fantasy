@@ -6,6 +6,7 @@ import Profile from "./Profile";
 import Creator from "./Creator";
 import Logout from "./Logout";
 import CharacterMain from "./character/CharacterMain";
+import SidebarCreator from "./sidebarCreator";
 
 const Main = () => {
   //Here i can write javascript code and functions
@@ -17,7 +18,6 @@ const Main = () => {
       <Route path="/Profile" element={<Profile />} />
       <Route path="/Creator" element={<Creator />} />
       <Route path="/Logout" element={<Logout />} />
-      <Route path="/CharacterMain" element={<CharacterMain />} />
     </Routes>
 
     // <div className="main-container">

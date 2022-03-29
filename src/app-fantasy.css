@@ -495,6 +495,7 @@ body.light-mode .video-bg:before {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .content-section-title {
   color: var(--content-title-color);
@@ -761,7 +762,7 @@ body.light-mode .video-bg:before {
 .app-card {
   display: flex;
   flex-direction: column;
-  /* width: calc(33.3% - 20px); */
+  width: calc(33.3% - 20px);
   width: 100%;
   font-size: 16px;
   background-color: var(--content-bg);
@@ -770,6 +771,7 @@ body.light-mode .video-bg:before {
   padding: 20px;
   cursor: pointer;
   transition: 0.3s ease;
+  color: #fff;
 }
 .app-card:hover {
   transform: scale(1.02);
@@ -781,9 +783,9 @@ body.light-mode .video-bg:before {
   margin-right: 12px;
   flex-shrink: 0;
 }
-.app-card + .app-card {
-  margin-left: 20px;
-}
+/* .app-card + .app-card {
+  
+} */
 .app-card span {
   display: flex;
   align-items: center;
@@ -920,4 +922,124 @@ body.light-mode .video-bg:before {
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-bg);
   border-radius: 10px;
+}
+
+/* MADS JUEL CSSS HYGGE TIL PROJECT */
+
+/* GRID */
+.grid-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem !important;
+  color: #fff;
+}
+
+/* -------------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+/* components */
+.testimonial-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight"
+    "nine";
+
+  padding-block: 2rem;
+  width: min(95%, 90rem);
+  margin-inline: auto;
+}
+
+.testimonial {
+  font-size: 0.8rem;
+  /* background-color: red; */
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+.testimonial:nth-child(6) {
+  grid-area: six;
+}
+.testimonial:nth-child(7) {
+  grid-area: seven;
+}
+.testimonial:nth-child(8) {
+  grid-area: eight;
+}
+.testimonial:nth-child(9) {
+  grid-area: nine;
+}
+
+/* @media screen and (min-width: 33em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four six";
+  }
+}
+*/
+@media screen and (min-width: 38em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two two"
+      "three three"
+      "four four"
+      "five five"
+      "six six"
+      "seven seven"
+      "eight eight"
+      "nine nine";
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two two"
+      "three three four four"
+      "five five six six"
+      "seven seven eight eight"
+      "nine nine nine nine";
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two two three three"
+      "four four five five six six"
+      "seven seven eight eight nine nine";
+  }
 }
