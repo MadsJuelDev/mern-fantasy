@@ -69,9 +69,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-img {
-  max-width: 100%;
-}
 .dark-light {
   position: fixed;
   bottom: 50px;
@@ -271,6 +268,14 @@ body.light-mode .video-bg:before {
 .profile-img {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--theme-color);
+  margin-left: 22px;
+}
+.asset-img {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--theme-color);
@@ -495,7 +500,7 @@ body.light-mode .video-bg:before {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .content-section-title {
   color: var(--content-title-color);
@@ -757,7 +762,7 @@ body.light-mode .video-bg:before {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: calc(100% + 20px);
+  /* width: calc(100% + 20px); */
 }
 .app-card {
   display: flex;
@@ -766,7 +771,7 @@ body.light-mode .video-bg:before {
   width: 100%;
   font-size: 16px;
   background-color: var(--content-bg);
-  border-radius: 14px;
+  margin-left: 20px;
   border: 1px solid var(--theme-bg-color);
   padding: 20px;
   cursor: pointer;
@@ -925,7 +930,15 @@ body.light-mode .video-bg:before {
 }
 
 /* MADS JUEL CSSS HYGGE TIL PROJECT */
+.card-flex-top {
+  display: flex;
+  flex-direction: row;
+}
 
+.button-margin {
+  margin-left: 5px;
+}
+/* -------------------------- */
 /* GRID */
 .grid-title {
   display: flex;
@@ -933,9 +946,8 @@ body.light-mode .video-bg:before {
   align-items: center;
   font-size: 1.5rem !important;
   color: #fff;
+  margin-left: 20px;
 }
-
-/* -------------------------- */
 
 .flex {
   display: flex;

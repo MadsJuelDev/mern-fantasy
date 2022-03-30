@@ -19,9 +19,8 @@ const CharacterMain = () => {
   return (
     <div className="content-section">
       <div className="content-section-title"></div>
-
+      <h2 className="grid-title">All hair assets</h2>
       <div className="apps-card testimonial-grid">
-        <h2 className="grid-title flow">All hair assets</h2>
         {data?.data.map((hair) => {
           return <Hair hair={hair} />;
         })}
